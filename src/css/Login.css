@@ -1,0 +1,182 @@
+.login {
+  position: relative;
+  min-height: 100vh;
+  background: #FAFAFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #FAFAFF;
+  -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #FAFAFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #F5F5F5;
+  -webkit-columns: #333333;
+          columns: #333333;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+form input[type="submit"] {
+  max-width: 100px;
+  background: #E40B0B;
+  color: #FAFAFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #E40B0B;
+}
+
+.container .signupBx {
+  pointer-events: none;
+}
+
+.container.active .signupBx {
+  pointer-events: initial;
+}
+
+.container .signupBx .formBx {
+  left: 100%;
+}
+
+.container.active .signupBx .formBx {
+  left: 0;
+}
+
+.container .signupBx .imgBx {
+  left: -100%;
+}
+
+.container.active .signupBx .imgBx {
+  left: 0;
+}
+
+.container .signinBx .formBx {
+  left: 0;
+}
+
+.container.active .signinBx .formBx {
+  left: 100%;
+}
+
+.container .signinBx .imgBx {
+  left: 0;
+}
+
+.container.active .signinBx .imgBx {
+  left: -100%;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 400px;
+  }
+  .imgBx {
+    display: none;
+  }
+  .formBx {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Login.css.map */

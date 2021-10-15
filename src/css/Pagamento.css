@@ -1,0 +1,41 @@
+.pagamento {
+  min-height: 50vh;
+}
+
+.pagamento__container {
+  margin-top: 6vh;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.pagamento__item {
+  color: #606060;
+}
+
+.pagamento__titulo {
+  font-size: 30px;
+  margin: 0;
+}
+
+.pagamento__section {
+  margin: 0 30vw 0 30vw;
+  text-align: left;
+}
+
+.pagamento__section form input {
+  width: 100%;
+  background-color: #FAFAFF;
+  color: black;
+  border: 1px solid #606060;
+}
+
+.pagamento__detalhes > form {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 930px) {
+  .pagamento__section {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=Pagamento.css.map */

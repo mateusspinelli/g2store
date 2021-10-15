@@ -1,0 +1,26 @@
+@import 'variaveis.scss';
+
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid $preto-light;
+    border-radius: 3px;
+}
+
+.subtotal > button{
+    height: 50px;
+    width: 100%;
+    background: $cor-principal;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    color: white;
+}
+
+.subtotal__total{
+    font-size: 25px;
+}

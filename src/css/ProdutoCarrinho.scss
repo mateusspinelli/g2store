@@ -1,0 +1,47 @@
+.produtoCarrinho{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.produtoCarrinho__img{
+    object-fit: contain;
+    max-height: 250px;
+}
+
+.produtoCarrinho__info{
+    padding-left: 20px;
+}
+
+.produtoCarrinho__titulo{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.produtoCarrinho__preco{
+    font-size: 20px;
+}
+
+.produtoCarrinho__info > button{
+    height: 40px;
+    width: 200px;
+    background: #E40B0B;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    border-radius: 50px;
+}
+
+.produtoCarrinho__info > button:hover{
+    background: #800000;
+}
+
+@media screen and (max-width: 930px){
+
+    .produtoCarrinho__titulo{
+        font-size: 15px;
+    }
+
+
+}

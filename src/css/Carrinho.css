@@ -1,0 +1,37 @@
+.carrinho {
+  margin-top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 52.7vh;
+  text-align: left;
+}
+
+.carrinho__titulo {
+  margin: 0;
+  font-size: 30px;
+}
+
+.carrinho__1 {
+  min-width: 800px;
+}
+
+.carrinho__2 {
+  margin: 20px 30vw 20px 30vw;
+}
+
+@media screen and (max-width: 930px) {
+  .carrinho__1 {
+    min-width: 100px;
+  }
+  .carrinho__2 {
+    margin: 20px 20vw 20px 20vw;
+  }
+}
+/*# sourceMappingURL=Carrinho.css.map */

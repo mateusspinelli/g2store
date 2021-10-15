@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,OAAO,EAAE,SAAS;EAClB,UAAU,EAAE,MAAM;CACrB;;AAED,AAAA,QAAQ,GAAG,EAAE,CAAA;EACT,MAAM,EAAE,MAAM;CACjB;;AAGD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAG/B,AAAA,QAAQ,CAAA;IACJ,OAAO,EAAE,GAAG;GAEf",
+    "sources": [
+        "Pedidos.scss"
+    ],
+    "names": [],
+    "file": "Pedidos.css"
+}

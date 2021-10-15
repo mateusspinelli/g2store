@@ -1,0 +1,32 @@
+.subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #606060;
+  border-radius: 3px;
+}
+
+.subtotal > button {
+  height: 50px;
+  width: 100%;
+  background: #E40B0B;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  color: white;
+}
+
+.subtotal__total {
+  font-size: 25px;
+}
+/*# sourceMappingURL=Subtotal.css.map */

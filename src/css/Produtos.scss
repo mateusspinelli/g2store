@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.produtos{
+    margin: 5vh 0 10vh 0;
+}
+
+.produtos__h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+}  
+
+.produtos__hr{
+    margin: 10px 40vw 10px 40vw;
+    height: 3px;
+    background-color: black;
+    text-align: center;
+    width: 20vw;
+}
+
+.produtos__linhaProdutos{
+    display: flex;
+    z-index: 1;
+    margin: 5vh 10vw 5vh 10vw;
+}
+
+.produtos__banner{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 930px){
+
+    .produtos__linhaProdutos{
+        display:inline;
+        margin: 5vh 0 5vh 0;
+    }
+
+    .produtos__h2{
+        text-align: center;
+        font-size: 30px;
+    }      
+
+}

@@ -1,0 +1,33 @@
+$font-semi: 600;
+$font-bold: 700;
+
+
+$cor-principal: #E40B0B;
+$cor-secundaria: #800000;
+$branco: #FAFAFF;
+$preto: #101010;
+$preto-light: #606060;
+$cinza: #F0F1F3;
+
+
+$body-font: 'Open Sans', sans-serif;
+$font-size-grande: 3rem;
+$font-size-normal: .938rem;
+$font-size-pequena: .75rem;
+$font-size-h1: 1.5rem;
+$font-size-h2: 1.25rem;
+
+
+@media screen and (min-width: 768px){
+        $font-size-grande: 6rem;
+        $font-size-normal: 1rem;
+        $font-size-pequena: .813rem;
+        $font-size-h1: 2.25rem;
+        $font-size-h2: 1.5rem;
+}
+
+
+$margin-1: .5rem;
+$margin-2: 1rem;
+$margin-3: 1.5rem;
+$margin-4: 2rem;

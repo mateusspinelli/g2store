@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'variaveis.scss';
+
+.produto{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 0 8px;
+    background-color: $branco;
+    z-index: 1;
+    max-height: 65vh;
+}
+
+
+.produto__info{
+    margin-top: 0;
+    text-align: left;
+}
+
+.produto__titulo{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Roboto,sans-serif;
+}
+
+.produto__preco{
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+}
+
+.produto__img{
+    width: 100%;   
+}
+
+
+
+
+
+.produto__box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.produto__box:hover .produto__link{
+    bottom: 0;
+}
+
+.produto__link{
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $branco;
+    transition: .4s;
+}
+
+
+.produto__img2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.produto__box:hover .produto__img2{
+    display: inline;
+}
+
+
+
+
+.produto__button{
+    display: inline-block;
+    background-color: $branco;
+    color: $preto;
+    font-size: $font-size-normal;
+    font-weight: $font-semi;
+    transition: .3s;
+    height: 30px;
+    border: 0.5px solid $preto;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.produto__button:hover{
+    background-color: #cecece;
+}
+
+
+
+
+@media screen and (max-width: 930px){
+
+    .produto__info{
+        text-align: center;
+    }
+
+
+    .produto__box:hover .produto__img2{
+        display: none;
+    }
+
+    .produto__button{
+        width: 50%;
+    }
+
+    .produto__link{
+
+        bottom: 0;
+
+    }
+
+
+}

@@ -1,0 +1,558 @@
+@import 'variaveis.scss';
+
+/*
+1 - RESET/SECTION
+2 - NAV
+3 - HOME
+4 - COLECAO
+5 - DESTAQUES
+6 - OFERTAS
+7 - NOVIDADES
+8 - PATROCINADORES
+9 - FOOTER
+10 - @media
+*/
+
+/*--------------------------------------------------------------------   1   ---------------------------------------------------------------------------------*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: $body-font;
+  font-size: $font-size-normal;
+  color: $preto;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $branco;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section__title {
+  font-size: $font-size-h1;
+  color: $preto;
+  margin: $margin-4 0 $margin-1;
+  text-align: center;
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 3rem);
+  margin-left: $margin-3;
+  margin-right: $margin-3;
+}
+
+/*--------------------------------------------------------------------------   2     ---------------------------------------------------------------------------*/
+
+.nav__menuLogin {
+  margin-left: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: $preto;
+}
+
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and(max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 3rem;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: $preto;
+    transition: 0.5s;
+  }
+}
+
+.nav__item {
+  margin-bottom: $margin-4;
+}
+
+.nav__link {
+  color: $branco;
+  font-weight: $font-semi;
+}
+
+.nav__link:hover {
+  color: $cor-principal;
+}
+
+.nav__logo {
+  font-weight: $font-bold;
+}
+
+.nav__cart {
+  font-size: 1.5rem;
+  margin-right: $margin-2;
+}
+
+.nav__cartN {
+  font-size: 22px;
+  margin-right: $margin-2;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: $branco;
+}
+
+.show {
+  right: 0;
+}
+
+.active {
+  color: $cor-principal;
+}
+
+/*------------------------------------------------------------------------   3    -----------------------------------------------------------------------------*/
+
+.home {
+  background: url('../img/weareg2esports.jpg') no-repeat center/cover;
+}
+
+.home__container {
+  height: calc(100vh - 3rem);
+}
+
+.button {
+  display: inline-block;
+  background-color: $cor-principal;
+  color: $branco;
+  padding: 1rem;
+  font-size: $font-size-pequena;
+  font-weight: $font-semi;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $cor-secundaria;
+}
+
+/*-------------------------------------------------------------------------   4    ----------------------------------------------------------------------------*/
+
+.colecao__container {
+  row-gap: 2rem;
+}
+
+.colecao__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: $cinza;
+  transition: 0.3s;
+}
+
+.colecao__box:hover {
+  transform: translateY(-0.5rem);
+}
+
+.colecao__img {
+  width: 100px;
+}
+
+.colecao__title {
+  font-size: $font-size-h1;
+  line-height: 1.2;
+  margin-bottom: $margin-2;
+  text-transform: uppercase;
+  font-weight: $font-semi;
+}
+
+.colecao__view {
+  font-size: $font-size-normal;
+  color: $preto-light;
+}
+
+.colecao__view:hover {
+  text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------    5    ------------------------------------------------------------------------------*/
+
+.destaque__container {
+  row-gap: 2rem;
+}
+
+.destaque__product {
+  transition: 0.3s;
+}
+
+.destaque__product:hover {
+  transform: translateY(-0.5rem);
+}
+
+.destaque__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $cinza;
+}
+
+.destaque__novidades {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $cor-principal;
+  color: $branco;
+  padding: 0.3rem 0.75rem;
+  font-size: $font-size-pequena;
+  z-index: 10;
+}
+
+.destaque__data {
+  text-align: center;
+}
+
+.destaque__name {
+  margin-bottom: $margin-1;
+  text-transform: uppercase;
+  font-size: $font-size-normal;
+}
+
+.destaque__price {
+  color: $preto-light;
+  font-weight: $font-semi;
+}
+
+.destaque__img2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.destaque__box:hover .destaque__img2 {
+  display: inline;
+}
+
+@media screen and (max-width: 930px) {
+  .destaque__box:hover .destaque__img2 {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------------------    6     -----------------------------------------------------------------------------*/
+
+.oferta__bg {
+  background: url('https://g2esports.com/wp-content/uploads/Banner_Samurai_new.jpg')
+    no-repeat center/cover;
+  text-align: center;
+}
+
+.oferta__data {
+  padding: 3.5rem 0.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: $branco;
+}
+
+.oferta__title {
+  font-size: $font-size-h1;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: $font-semi;
+}
+
+.oferta__description {
+  margin-bottom: $margin-2;
+  letter-spacing: 0.2rem;
+}
+
+/*-------------------------------------------------------------------------    7    ----------------------------------------------------------------------------*/
+
+.section__all {
+  display: block;
+  font-size: $font-size-normal;
+  font-weight: $font-semi;
+  color: $preto-light;
+  text-align: center;
+  margin-bottom: $margin-2;
+}
+
+.novidades__container {
+  row-gap: 2rem;
+}
+
+.novidades__img2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.novidades__box:hover .novidades__img2 {
+  display: inline;
+}
+
+.novidades__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $cinza;
+  overflow: hidden;
+}
+
+.novidades__box:hover .novidades__link {
+  bottom: 0;
+}
+
+.novidades__title {
+  margin-bottom: 50px;
+  color: $branco;
+}
+
+.novidades__link {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.novidadesemail {
+  text-align: center;
+}
+
+.novidadesemail__description {
+  margin-bottom: $margin-2;
+  font-size: $font-size-pequena;
+  color: $preto-light;
+}
+
+.novidadesemail__form {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.novidadesemail__input {
+  outline: none;
+  border: none;
+  background-color: $cinza;
+  padding: 0 1rem;
+}
+
+/*--------------------------------------------------------------------------    8     ---------------------------------------------------------------------------*/
+
+.patrocinadores__container {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.patrocinadores__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.patrocinadores__logo img {
+  width: 100px;
+  filter: opacity(70%);
+}
+
+.patrocinadores__logo img:hover {
+  filter: none;
+}
+
+/*--------------------------------------------------------------------------    9     ---------------------------------------------------------------------------*/
+
+.footer {
+  background-color: $preto;
+  color: $branco;
+}
+
+.footer__container {
+  row-gap: 1.5rem;
+  margin-bottom: $margin-4;
+}
+
+.footer__title {
+  margin-bottom: $margin-1;
+}
+
+.footer__deal {
+  margin-bottom: $margin-2;
+}
+
+.footer__store {
+  width: 100px;
+}
+
+.footer__link,
+.footer__social {
+  color: $preto-light;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__social {
+  font-size: 1.3rem;
+  margin-right: $margin-1;
+}
+
+.footer__copy {
+  border-top: 1px solid $preto-light;
+  padding-top: 3rem;
+  text-align: center;
+  color: $preto-light;
+  font-size: $font-size-pequena;
+}
+
+/*---------------------------------------------------------------------------   10     --------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .section__all {
+    margin-bottom: $margin-4;
+  }
+
+  .nav {
+    height: calc(3rem + 1rem);
+  }
+
+  .nav__menu {
+    margin-left: auto;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-left: $margin-4;
+    margin-bottom: 0;
+  }
+
+  .nav__toggle {
+    position: absolute;
+    right: 10000000000000000000vw;
+  }
+
+  .home__container {
+    height: 100vh;
+  }
+
+  .home__data {
+    padding: 0;
+    height: max-content;
+    align-self: center;
+  }
+
+  .home__title {
+    line-height: 0.8;
+    letter-spacing: 1.5rem;
+  }
+
+  .home__img {
+    width: 370px;
+  }
+
+  .colecao__container {
+    grid-template-columns: repeat(2.1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .colecao__box {
+    padding: 0.5rem 3rem 0;
+  }
+
+  .colecao__img {
+    width: 130px;
+  }
+
+  .destaque__container,
+  .patrocinadores__container,
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .oferta__data {
+    padding: 5rem 0;
+  }
+
+  .novidades__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .novidadesemail__form {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .footer__container {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__data {
+    padding-left: 7rem;
+  }
+
+  .home__img {
+    right: 15%;
+  }
+}

@@ -1,0 +1,586 @@
+/*
+1 - RESET/SECTION
+2 - NAV
+3 - HOME
+4 - COLECAO
+5 - DESTAQUES
+6 - OFERTAS
+7 - NOVIDADES
+8 - PATROCINADORES
+9 - FOOTER
+10 - @media
+*/
+/*--------------------------------------------------------------------   1   ---------------------------------------------------------------------------------*/
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.938rem;
+  color: #101010;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FAFAFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  color: #101010;
+  margin: 2rem 0 0.5rem;
+  text-align: center;
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*--------------------------------------------------------------------------   2     ---------------------------------------------------------------------------*/
+.nav__menuLogin {
+  margin-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #101010;
+}
+
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 3rem;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #101010;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  color: #FAFAFF;
+  font-weight: 600;
+}
+
+.nav__link:hover {
+  color: #E40B0B;
+}
+
+.nav__logo {
+  font-weight: 700;
+}
+
+.nav__cart {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.nav__cartN {
+  font-size: 22px;
+  margin-right: 1rem;
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #FAFAFF;
+}
+
+.show {
+  right: 0;
+}
+
+.active {
+  color: #E40B0B;
+}
+
+/*------------------------------------------------------------------------   3    -----------------------------------------------------------------------------*/
+.home {
+  background: url("../img/weareg2esports.jpg") no-repeat center/cover;
+}
+
+.home__container {
+  height: calc(100vh - 3rem);
+}
+
+.button {
+  display: inline-block;
+  background-color: #E40B0B;
+  color: #FAFAFF;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #800000;
+}
+
+/*-------------------------------------------------------------------------   4    ----------------------------------------------------------------------------*/
+.colecao__container {
+  row-gap: 2rem;
+}
+
+.colecao__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.5rem;
+  background-color: #F0F1F3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.colecao__box:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.colecao__img {
+  width: 100px;
+}
+
+.colecao__title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.colecao__view {
+  font-size: 0.938rem;
+  color: #606060;
+}
+
+.colecao__view:hover {
+  text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------    5    ------------------------------------------------------------------------------*/
+.destaque__container {
+  row-gap: 2rem;
+}
+
+.destaque__product {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.destaque__product:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.destaque__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F0F1F3;
+}
+
+.destaque__novidades {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #E40B0B;
+  color: #FAFAFF;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+.destaque__data {
+  text-align: center;
+}
+
+.destaque__name {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.938rem;
+}
+
+.destaque__price {
+  color: #606060;
+  font-weight: 600;
+}
+
+.destaque__img2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.destaque__box:hover .destaque__img2 {
+  display: inline;
+}
+
+@media screen and (max-width: 930px) {
+  .destaque__box:hover .destaque__img2 {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------------------    6     -----------------------------------------------------------------------------*/
+.oferta__bg {
+  background: url("https://g2esports.com/wp-content/uploads/Banner_Samurai_new.jpg") no-repeat center/cover;
+  text-align: center;
+}
+
+.oferta__data {
+  padding: 3.5rem 0.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FAFAFF;
+}
+
+.oferta__title {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.oferta__description {
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+/*-------------------------------------------------------------------------    7    ----------------------------------------------------------------------------*/
+.section__all {
+  display: block;
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #606060;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.novidades__container {
+  row-gap: 2rem;
+}
+
+.novidades__img2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.novidades__box:hover .novidades__img2 {
+  display: inline;
+}
+
+.novidades__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F0F1F3;
+  overflow: hidden;
+}
+
+.novidades__box:hover .novidades__link {
+  bottom: 0;
+}
+
+.novidades__title {
+  margin-bottom: 50px;
+  color: #FAFAFF;
+}
+
+.novidades__link {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.novidadesemail {
+  text-align: center;
+}
+
+.novidadesemail__description {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #606060;
+}
+
+.novidadesemail__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5fr;
+      grid-template-columns: 1fr 0.5fr;
+}
+
+.novidadesemail__input {
+  outline: none;
+  border: none;
+  background-color: #F0F1F3;
+  padding: 0 1rem;
+}
+
+/*--------------------------------------------------------------------------    8     ---------------------------------------------------------------------------*/
+.patrocinadores__container {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.patrocinadores__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.patrocinadores__logo img {
+  width: 100px;
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
+}
+
+.patrocinadores__logo img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/*--------------------------------------------------------------------------    9     ---------------------------------------------------------------------------*/
+.footer {
+  background-color: #101010;
+  color: #FAFAFF;
+}
+
+.footer__container {
+  row-gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer__title {
+  margin-bottom: 0.5rem;
+}
+
+.footer__deal {
+  margin-bottom: 1rem;
+}
+
+.footer__store {
+  width: 100px;
+}
+
+.footer__link,
+.footer__social {
+  color: #606060;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__social {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+.footer__copy {
+  border-top: 1px solid #606060;
+  padding-top: 3rem;
+  text-align: center;
+  color: #606060;
+  font-size: 0.75rem;
+}
+
+/*---------------------------------------------------------------------------   10     --------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section__all {
+    margin-bottom: 2rem;
+  }
+  .nav {
+    height: calc(3rem + 1rem);
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    position: absolute;
+    right: 10000000000000000000vw;
+  }
+  .home__container {
+    height: 100vh;
+  }
+  .home__data {
+    padding: 0;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .home__title {
+    line-height: 0.8;
+    letter-spacing: 1.5rem;
+  }
+  .home__img {
+    width: 370px;
+  }
+  .colecao__container {
+    -ms-grid-columns: ()[2.1fr];
+        grid-template-columns: repeat(2.1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .colecao__box {
+    padding: 0.5rem 3rem 0;
+  }
+  .colecao__img {
+    width: 130px;
+  }
+  .destaque__container,
+  .patrocinadores__container,
+  .footer__container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .oferta__data {
+    padding: 5rem 0;
+  }
+  .novidades__container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .novidadesemail__form {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .footer__container {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__data {
+    padding-left: 7rem;
+  }
+  .home__img {
+    right: 15%;
+  }
+}
+/*# sourceMappingURL=Style.css.map */
